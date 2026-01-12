@@ -1,0 +1,282 @@
+/* 
+ * Minimal Personal Website
+ * Pure CSS, no frameworks
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #1a1a1a;
+    --text-secondary: #666;
+    --background: #ffff;
+    --link: #0066cc;
+    --link-hover: #004499;
+    --border: #e0e0e0;
+    --max-width: 640px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--background);
+}
+
+/* Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+}
+
+nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+/* Main Content */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    margin-bottom: 1.5rem;
+}
+
+.links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.links a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+#projects {
+    padding: 2rem 0;
+}
+
+/* Category */
+.category {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.category:last-child {
+    border-bottom: none;
+}
+
+.category h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    display: inline;
+}
+
+.category-note {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Collapsible */
+.collapsible {
+    margin-top: 0.5rem;
+}
+
+.collapsible summary {
+    cursor: pointer;
+    color: var(--link);
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+.collapsible summary::-webkit-details-marker {
+    display: none;
+}
+
+.collapsible summary::before {
+    content: "+ ";
+}
+
+.collapsible[open] summary::before {
+    content: "− ";
+}
+
+.collapsible summary:hover {
+    text-decoration: underline;
+}
+
+/* Project List */
+.project-list {
+    list-style: none;
+}
+
+.project {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.project-title {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.company,
+.course {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.company::before {
+    content: " ";
+}
+
+.year {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
+
+.status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.status.active {
+    background-color: #22c55e;
+}
+
+.status.inactive {
+    background-color: var(--text-secondary);
+}
+
+.project p {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+}
+
+/* Footer */
+footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+footer h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 0 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    nav {
+        gap: 1.5rem;
+    }
+
+    .contact-links {
+        gap: 1rem;
+    }
+}
