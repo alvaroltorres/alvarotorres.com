@@ -124,6 +124,10 @@ main {
     display: inline;
 }
 
+.category > div {
+    margin-top: 1rem;
+}
+
 .category-note {
     color: var(--text-secondary);
     font-size: 0.875rem;
