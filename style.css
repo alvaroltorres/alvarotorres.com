@@ -106,6 +106,56 @@ main {
     padding: 2rem 0;
 }
 
+/* Interests Section */
+#interests {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+}
+
+#interests h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.section-intro {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.interest-category {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.interest-category:last-child {
+    border-bottom: none;
+}
+
+.interest-category h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.interest-category ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.interest-category li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+}
+
+.interest-category p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 /* Category */
 .category {
     padding: 2rem 0;
