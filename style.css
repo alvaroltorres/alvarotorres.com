@@ -125,10 +125,17 @@ main {
     padding: 2rem 0;
 }
 
+.content-section {
+    padding: 2rem 0;
+}
+
+.content-section + .content-section {
+    border-top: 1px solid var(--border);
+}
+
 /* Interests Section */
 #interests {
     padding: 2rem 0;
-    border-top: 1px solid var(--border);
 }
 
 #interests h2 {
